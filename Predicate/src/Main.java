@@ -15,5 +15,13 @@ public class Main {
         long end = System.currentTimeMillis();
         System.out.println("The output is written to : " + args[1]  +  "\nTime: " + (end - start) + "ms");
         System.out.println("-------------------------------------------------------------------------");
+
+//        File dir = new File("proofs_in/");
+//        File[] dirFiles = dir.listFiles();
+//        if (dirFiles != null) {
+//            for (File file : dirFiles) {
+//                PredicateCalculusProofChecker checker = new PredicateCalculusProofChecker();
+//            }
+//        }
     }
 }
