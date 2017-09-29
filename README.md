@@ -6,6 +6,6 @@ Compile Main.java in Predicate/src, and run Main class <br>
 # HW3
 To generate comparison proof of 2 numbers: <br>
 compile ProofGenerator.java in HW3/src <br>
-run ProofGenerator class, passing a and b (0 <= a, b <= 100)
+run ProofGenerator class, passing a and b (0 <= a, b <= 100) <br>
 ~java ProofGenerator a b
 
