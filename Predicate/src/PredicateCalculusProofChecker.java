@@ -280,11 +280,11 @@ public class PredicateCalculusProofChecker {
                                     boundedArgs.add(alpha);
                                     boundedArgs.add(expr.left);
                                     boundedArgs.add(expr.right.right);
-                                    res.addAll(getProofPart("lemma_template/(1->2->3)->(1&2->3)", boundedArgs));
+                                    res.addAll(getProofPart("lemma_template/ImplToConj", boundedArgs));
                                     res.add(parser.impl("1&2->3").bind(boundedArgs).str);
                                     boundedArgs.set(2, expr.right);
                                     res.add(parser.impl("1&2->3").bind(boundedArgs).str);
-                                    res.addAll(getProofPart("lemma_template/(1&2->3)->(1->2->3)", boundedArgs));
+                                    res.addAll(getProofPart("lemma_template/ConjToImpl", boundedArgs));
                                 }
                                 state = new JustificationState(State.ANY_RULE);
                                 prove = true;
@@ -310,14 +310,14 @@ public class PredicateCalculusProofChecker {
                                     boundedArgs.add(alpha);
                                     boundedArgs.add(expr.left.right);
                                     boundedArgs.add(expr.right);
-                                    res.addAll(getProofPart("lemma_template/(1->(2->3))->(2->(1->3))", boundedArgs));
+                                    res.addAll(getProofPart("lemma_template/ImplLemma", boundedArgs));
                                     res.add(parser.impl("2->1->3").bind(boundedArgs).str);
                                     boundedArgs.clear();
                                     boundedArgs.add(expr.left);
                                     boundedArgs.add(alpha);
                                     boundedArgs.add(expr.right);
                                     res.add(parser.impl("1->2->3").bind(boundedArgs).str);
-                                    res.addAll(getProofPart("lemma_template/(1->(2->3))->(2->(1->3))", boundedArgs));
+                                    res.addAll(getProofPart("lemma_template/ImplLemma", boundedArgs));
                                 }
                                 state = new JustificationState(State.EXIST_RULE);
                                 prove = true;
