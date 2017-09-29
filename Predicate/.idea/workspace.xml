@@ -28,8 +28,8 @@
       <file leaf-file-name="PredicateCalculusProofChecker.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/PredicateCalculusProofChecker.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="396">
-              <caret line="221" column="12" lean-forward="false" selection-start-line="221" selection-start-column="12" selection-end-line="221" selection-end-column="12" />
+            <state relative-caret-position="198">
+              <caret line="215" column="4" lean-forward="true" selection-start-line="215" selection-start-column="4" selection-end-line="215" selection-end-column="4" />
               <folding>
                 <element signature="imports" expanded="false" />
               </folding>
@@ -819,12 +819,12 @@
       <workItem from="1504895592782" duration="7293000" />
       <workItem from="1504904234272" duration="1794000" />
       <workItem from="1506713844450" duration="156000" />
-      <workItem from="1506714072178" duration="445000" />
+      <workItem from="1506714072178" duration="690000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="286668000" />
+    <option name="totallyTimeSpent" value="286913000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="64" y="-4" width="1857" height="1085" extended-state="6" />
@@ -1239,8 +1239,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/PredicateCalculusProofChecker.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="221" column="12" lean-forward="false" selection-start-line="221" selection-start-column="12" selection-end-line="221" selection-end-column="12" />
+        <state relative-caret-position="198">
+          <caret line="215" column="4" lean-forward="true" selection-start-line="215" selection-start-column="4" selection-end-line="215" selection-end-column="4" />
           <folding>
             <element signature="imports" expanded="false" />
           </folding>
