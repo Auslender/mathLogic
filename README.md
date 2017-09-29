@@ -4,4 +4,8 @@ Compile Main.java in Predicate/src, and run Main class <br>
 ~java Main [absolute path to the file with your proof] [absolute path to the file for output]
 
 # HW3
-./generate_comparing_proof a b
+To generate comparison proof of 2 numbers: <br>
+compile ProofGenerator.java in HW3/src <br>
+run ProofGenerator class, passing a and b (0 <= a, b <= 100)
+~java ProofGenerator a b
+
