@@ -21,7 +21,7 @@ public class ResourceHandler {
 
     public ArrayList<Expression> getAxioms() throws IOException {
         ArrayList<Expression> axioms = new ArrayList<>();
-        Scanner in= new Scanner(new File("solid/axioms"));
+        Scanner in= new Scanner(new File("solid/axioms.txt"));
         while (in.hasNextLine()) {
             axioms.add(parser.impl(in.nextLine()));
         }
