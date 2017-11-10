@@ -1,8 +1,11 @@
 # Predicate Calculus Proof Checker
-Predicate contains predicate-calculus proof checker. 
-In src/start_scripts you can find scripts for checking proofs: <br />
-To check standard proofs from directory src/proofs_in - ./check_proofs_in.sh <br />
-To check external proof(s) - ./check_external_proofs.sh [absolute path to file or directory with proofs]
+Predicate contains predicate-calculus proof checker. <br>
+Compile Main.java in Predicate/src, and run Main class <br>
+~java Main [absolute path to the file with your proof] [absolute path to the file for output]
 
 # HW3
-./generate_comparing_proof a b
+To generate comparison proof of 2 numbers: <br>
+compile ProofGenerator.java in HW3/src <br>
+run ProofGenerator class, passing a and b (0 <= a, b <= 100) <br>
+~java ProofGenerator a b <br>
+The resulting proof is in src/compare_proof
