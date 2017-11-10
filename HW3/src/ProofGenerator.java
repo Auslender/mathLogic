@@ -25,7 +25,7 @@ public class ProofGenerator
         String ap = toPeanoNumber(a, "0");
         String bp = toPeanoNumber(b, "0");
         out.println("|-?p(" + ap + "+p=" + bp + ")");
-        initPlaceholders("inter_proofs/@a(!(a'=0))", out, "", "", "");
+        initPlaceholders("inter_proofs/plus_one", out, "", "", "");
         initPlaceholders("inter_proofs/less_base", out, ap, "", "");
         for (int i = 0; i < b - a; i++) {
             initPlaceholders("inter_proofs/less_induction_step", out, ap, toPeanoNumber(i, "0"), toPeanoNumber(a + i, "0"));
@@ -38,7 +38,7 @@ public class ProofGenerator
         String ap = toPeanoNumber(a, "0");
         String bp = toPeanoNumber(b, "0");
         out.println("|-@p(!(p+" + ap + "=" + bp + "))");
-        initPlaceholders("inter_proofs/@a(!(a'=0))", out, "", "", "");
+        initPlaceholders("inter_proofs/plus_one", out, "", "", "");
         initPlaceholders("inter_proofs/more_base", out, toPeanoNumber(a - b - 1, "0"), "", "");
         String temp = "(p+" + toPeanoNumber(a - b - 1, "0") + ")\'";
         for (int i = 0; i< b; i++) {

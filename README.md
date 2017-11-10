@@ -9,3 +9,7 @@ compile ProofGenerator.java in HW3/src <br>
 run ProofGenerator class, passing a and b (0 <= a, b <= 100) <br>
 ~java ProofGenerator a b <br>
 The resulting proof is in src/compare_proof
+<<<<<<< HEAD
+=======
+
+>>>>>>> ea889537289d62ff427d3faebc0bf20890f1b092
