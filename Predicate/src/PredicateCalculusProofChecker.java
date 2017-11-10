@@ -222,7 +222,7 @@ public class PredicateCalculusProofChecker {
                     if (alpha != null) {
                         boundedArgs.add(expr);
                         boundedArgs.add(alpha);
-                        res.addAll(getProofPart("lemma_template/axiom_or_hypothesis", boundedArgs));
+                        res.addAll(getProofPart("lemma_template/axiom_or_hypothesis.txt", boundedArgs));
                     }
                 }
 
@@ -232,7 +232,7 @@ public class PredicateCalculusProofChecker {
                     boundedArgs.add(expr);
                     Expression temp = new Expression(expr, expr, "->");
                     boundedArgs.add(temp);
-                    res.addAll(getProofPart("lemma_template/alpha->alpha", boundedArgs));
+                    res.addAll(getProofPart("lemma_template/alpha_alpha.txt", boundedArgs));
                     prove = true;
                 }
 
@@ -251,7 +251,7 @@ public class PredicateCalculusProofChecker {
                                         boundedArgs.add(proved.get(i));
                                         boundedArgs.add(expr);
                                         if (alpha != null) {
-                                            res.addAll(getProofPart("lemma_template/modus_ponens", boundedArgs));
+                                            res.addAll(getProofPart("lemma_template/modus_ponens.txt", boundedArgs));
                                         } else {
                                         res.add(expr.str);
                                     }
@@ -280,11 +280,11 @@ public class PredicateCalculusProofChecker {
                                     boundedArgs.add(alpha);
                                     boundedArgs.add(expr.left);
                                     boundedArgs.add(expr.right.right);
-                                    res.addAll(getProofPart("lemma_template/(1->2->3)->(1&2->3)", boundedArgs));
+                                    res.addAll(getProofPart("lemma_template/ImplToConj.txt", boundedArgs));
                                     res.add(parser.impl("1&2->3").bind(boundedArgs).str);
                                     boundedArgs.set(2, expr.right);
                                     res.add(parser.impl("1&2->3").bind(boundedArgs).str);
-                                    res.addAll(getProofPart("lemma_template/(1&2->3)->(1->2->3)", boundedArgs));
+                                    res.addAll(getProofPart("lemma_template/ConjToImpl.txt", boundedArgs));
                                 }
                                 state = new JustificationState(State.ANY_RULE);
                                 prove = true;
@@ -310,14 +310,14 @@ public class PredicateCalculusProofChecker {
                                     boundedArgs.add(alpha);
                                     boundedArgs.add(expr.left.right);
                                     boundedArgs.add(expr.right);
-                                    res.addAll(getProofPart("lemma_template/(1->(2->3))->(2->(1->3))", boundedArgs));
+                                    res.addAll(getProofPart("lemma_template/ImplLemma.txt", boundedArgs));
                                     res.add(parser.impl("2->1->3").bind(boundedArgs).str);
                                     boundedArgs.clear();
                                     boundedArgs.add(expr.left);
                                     boundedArgs.add(alpha);
                                     boundedArgs.add(expr.right);
                                     res.add(parser.impl("1->2->3").bind(boundedArgs).str);
-                                    res.addAll(getProofPart("lemma_template/(1->(2->3))->(2->(1->3))", boundedArgs));
+                                    res.addAll(getProofPart("lemma_template/ImplLemma.txt", boundedArgs));
                                 }
                                 state = new JustificationState(State.EXIST_RULE);
                                 prove = true;

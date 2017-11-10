@@ -13,6 +13,7 @@ public class ResourceHandler {
     private static Expression betta;
 
     private static ParseExpression parser = new ParseExpression();
+    public static boolean is_header = false;
 
 
     ResourceHandler(String inputFileString) throws IOException {
@@ -21,7 +22,7 @@ public class ResourceHandler {
 
     public ArrayList<Expression> getAxioms() throws IOException {
         ArrayList<Expression> axioms = new ArrayList<>();
-        Scanner in= new Scanner(new File("solid/axioms"));
+        Scanner in= new Scanner(new File("solid/axioms.txt"));
         while (in.hasNextLine()) {
             axioms.add(parser.impl(in.nextLine()));
         }
@@ -31,6 +32,7 @@ public class ResourceHandler {
     public ArrayList<Expression> getHypothesis() throws IOException {
         String title = in.readLine().replace(" ", "");
         if (title.contains("|-")) {
+            is_header = true;
             ArrayList<Expression> hypothesis = new ArrayList<>();
             betta = parser.impl(title.substring(title.indexOf("|-") + 2));
 
@@ -50,6 +52,8 @@ public class ResourceHandler {
             }
             alpha = parser.impl(s.substring(0, s.indexOf("|-")));
             return hypothesis;
+        } else {
+
         }
         return null;
     }
