@@ -17,7 +17,6 @@ public class ProofGenerator
         } catch (IOException e) {
             System.out.println(e.getMessage());
         }
-
     }
 
     //a < b
