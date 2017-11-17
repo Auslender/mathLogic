@@ -3,7 +3,7 @@ Predicate contains predicate-calculus proof checker. <br>
 ```
 ~ cd Predicate/src
 ~ javac *.java
-~ java Main [absolute path to the file with your proof] [absolute path to the file for output]
+~ java Main [path to the file with your proof] [path to the file for output]
 ```
 # HW3
 To generate comparison proof of 2 numbers: <br>
