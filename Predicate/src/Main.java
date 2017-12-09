@@ -5,6 +5,11 @@ import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.nio.charset.Charset;
+import java.nio.charset.StandardCharsets;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
@@ -56,6 +61,7 @@ public class Main {
             System.out.println("Processing proof from file : " + args[0]);
             while (in.hasNext()) {
                 generator.add(parser.parse(in.nextLine()));
+
             }
         } catch (IOException e) {
             System.out.println(e.getMessage());
@@ -67,6 +73,12 @@ public class Main {
             }
         }
         long end = System.currentTimeMillis();
+        Path path = Paths.get(args[1]);
+        Charset charset = StandardCharsets.UTF_8;
+
+        String content = new String(Files.readAllBytes(path), charset);
+        content = content.replaceAll("\\(\\)", "");
+        Files.write(path, content.getBytes(charset));
         System.out.println("The output is written to : " + args[1]  +  "\nTime: " + (end - start) + "ms");
     }
 }
